@@ -35,7 +35,6 @@ export function Countdown() {
           className={styles.countdownButton}
         >
           Ciclo encerrado
-          <MdCheckCircle color="#4CD62B" fontSize={20} />
         </button>
       ) : (
         <>
@@ -46,7 +45,6 @@ export function Countdown() {
               onClick={resetCountdown}
             >
               Abandonar ciclo
-              <MdClose fontSize={24} />
             </button>
           ): (
             <button

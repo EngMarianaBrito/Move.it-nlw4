@@ -1,4 +1,5 @@
 import { createContext, useState, ReactNode, useEffect } from 'react';
+import challenges from '../../challenges.json';
 import { LevelUpModal } from '../components/LevelUpModal';
 
 interface IChallenge {
@@ -42,12 +43,7 @@ export function ChallengesProvider({ children, ...rest }: IChallengesProviderPro
     Notification.requestPermission();
   }, []);
 
-  useEffect(() => {
-    Cookies.set('level', String(level));
-    Cookies.set('currentExperience', String(currentExperience));
-    Cookies.set('challengesCompleted', String(challengesCompleted));
-  }, [level, currentExperience, challengesCompleted]);
-
+  
   const levelUp = () => {setLevel(level + 1); setIsLevelUpModalOpen(true);};
   const closeLevelUpModal = () => setIsLevelUpModalOpen(false);
   const startNewChallenge = () => {
