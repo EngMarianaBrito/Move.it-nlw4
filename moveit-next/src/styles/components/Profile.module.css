@@ -1,29 +1,41 @@
-.profileContainer {
+.profileRow {
     display: flex;
     align-items: center;
-}
-
-.profileContainer > img {
+    justify-content: space-between;
+  }
+  
+  .profileRow svg {
+    color: #F2C94C;
+    font-size: 46px;
+    cursor: pointer;
+  }
+  
+  .profileContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileContainer > img {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: 50%;
-}
-
-.profileContainer div {
+  }
+  
+  .profileContainer div {
     margin-left: 1.5rem;
-}
-
-.profileContainer div strong {
+  }
+  
+  .profileContainer div strong {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--title);
-}
-
-.profileContainer div p {
+  }
+  
+  .profileContainer div p {
     font-size: 1rem;
     margin-top: 0.5rem;
-}
-
-.profileContainer div p img {
+  }
+  
+  .profileContainer div p img {
     margin-right: 0.5rem;
-}
+  }

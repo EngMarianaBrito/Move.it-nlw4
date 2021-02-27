@@ -1,7 +1,14 @@
-import '../styles/global.css'
+import '../styles/global.css';
+
+import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
+
 function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
-  }
-  
-  export default MyApp
-  
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+}
+
+export default MyApp;
